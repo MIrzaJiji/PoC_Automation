@@ -33,17 +33,13 @@ print(reference_Id)
 
 # grafana part
 
-sleep(1300)
+sleep(300)
 
 print("time to check network")
 
-sleep(300)
-# sleep(2)
-secondChanel = qarvaDriver.find_element(By.CLASS_NAME, "Demo_Connected_Channel")
-secondChanel.click()
-print("spike time")
 sleep(150)
-qarvaDriver.quit()
+# sleep(2)
+
 
 7
 driverGraf = webdriver.Chrome(PATH)
@@ -101,6 +97,14 @@ final_latency = driverGraf.find_element(By.XPATH,
                                         "/html/body/div/div[1]/main/div[3]/div/div/div[1]/div/div/div[1]/div/div/div[5]/div/section/div[2]/div/div[2]").text
 print(final_latency, "\n")
 
+##
+secondChanel = qarvaDriver.find_element(By.CLASS_NAME, "Demo_Connected_Channel")
+secondChanel.click()
+print("spike time")
+sleep(150)
+qarvaDriver.quit()
+
+##
 bitrate_switch_count = driverGraf.find_element(By.XPATH,
                                                "/html/body/div/div[1]/main/div[3]/div/div/div[1]/div/div/div[1]/div/div/div[7]/div/section/div[2]/div/div[1]").text
 print(bitrate_switch_count, "\n")
