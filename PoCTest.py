@@ -33,10 +33,17 @@ print(reference_Id)
 
 # grafana part
 
-sleep(1200)
+sleep(1300)
+
+print("time to check network")
+
+sleep(300)
 # sleep(2)
 secondChanel = qarvaDriver.find_element(By.CLASS_NAME, "Demo_Connected_Channel")
 secondChanel.click()
+print("spike time")
+sleep(150)
+qarvaDriver.quit()
 
 7
 driverGraf = webdriver.Chrome(PATH)
@@ -61,8 +68,8 @@ driverGraf.find_element(By.XPATH,
 driverGraf.find_element(By.CLASS_NAME, "css-yn255a-input-input").send_keys(reference_Id)
 # driverGraf.find_element(By.CLASS_NAME, "css-yn255a-input-input").send_keys("650cd4fa6e1d3683")  # test
 driverGraf.find_elements(By.CLASS_NAME, "css-yu4292-filterListRow")[0].click()
-driverGraf.find_element(By.XPATH, "/html/body/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div[1]/div/div[1]").click()
-
+driverGraf.find_element(By.XPATH,
+                        "/html/body/div/div[2]/div/div/div/div/div/div/div/div[2]/div/div[1]/div/div[1]").click()
 
 # 11
 session_id = driverGraf.find_element(By.CLASS_NAME, 'css-1w5pd0q')
